@@ -11,6 +11,7 @@ PROFILE = {{ cookiecutter.aws_profile }}
 PROJECT_NAME = {{ cookiecutter.repo_name }}
 PYTHON_INTERPRETER = {{ cookiecutter.python_interpreter }}
 ENVIRONMENT_FILE = environment.yml
+ENVIRONMENT_NAME = {{ cookiecutter.conda_python_env}}
 
 ifeq (,$(shell which conda))
 HAS_CONDA=False
@@ -95,7 +96,7 @@ endif
 remove_environment:
 ifeq (True,$(HAS_CONDA))
 		@echo ">>> Detected conda, removing conda environment"
-		conda env remove -n $(PROJECT_NAME)
+		conda env remove -n $(ENVIRONMENT_NAME)
 endif
 
 #################################################################################
