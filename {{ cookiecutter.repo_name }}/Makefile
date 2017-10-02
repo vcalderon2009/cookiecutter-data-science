@@ -90,7 +90,7 @@ ifeq (True,$(HAS_CONDA))
 		conda env update -f $(ENVIRONMENT_FILE)
 endif
 
-## Delte python interpreter environment
+## Delete python interpreter environment
 remove_environment:
 ifeq (True,$(HAS_CONDA))
 		@echo ">>> Detected conda, removing conda environment"
