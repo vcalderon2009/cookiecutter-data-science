@@ -9,6 +9,7 @@ BUCKET = {{ cookiecutter.s3_bucket }}
 PROFILE = {{ cookiecutter.aws_profile }}
 PROJECT_NAME = {{ cookiecutter.repo_name }}
 PYTHON_INTERPRETER = {{ cookiecutter.python_interpreter }}
+ENVIRONMENT_FILE = environment.yml
 
 ifeq (,$(shell which conda))
 HAS_CONDA=False
@@ -73,6 +74,28 @@ endif
 ## Test python environment is setup correctly
 test_environment:
 	$(PYTHON_INTERPRETER) test_environment.py
+
+## Set up python interpreter environment - Using environment.yml
+environment:
+ifeq (True,$(HAS_CONDA))
+		@echo ">>> Detected conda, creating conda environment."
+		# conda config --add channels conda-forge
+		conda env create -f $(ENVIRONMENT_FILE)
+endif
+
+## Update python interpreter environment
+update_environment:
+ifeq (True,$(HAS_CONDA))
+		@echo ">>> Detected conda, creating conda environment."
+		conda env update -f $(ENVIRONMENT_FILE)
+endif
+
+## Delte python interpreter environment
+remove_environment:
+ifeq (True,$(HAS_CONDA))
+		@echo ">>> Detected conda, removing conda environment"
+		conda env remove -n $(PROJECT_NAME)
+endif
 
 #################################################################################
 # PROJECT RULES                                                                 #
