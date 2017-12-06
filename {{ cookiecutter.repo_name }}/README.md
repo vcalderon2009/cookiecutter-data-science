@@ -39,7 +39,7 @@ $:  make show-help
     make environment
 ```
 
-* __Activate__ the new environment __sdss\_catl\_make__.
+* __Activate__ the new environment __{{cookiecutter.conda_python_env}}__.
 
 ```
     source activate {{cookiecutter.conda_python_env}}
