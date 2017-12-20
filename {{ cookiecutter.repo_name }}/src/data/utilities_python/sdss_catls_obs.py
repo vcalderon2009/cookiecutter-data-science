@@ -99,9 +99,17 @@ def catl_sdss_dir(catl_kind='data', catl_type='mr', sample_s='19',
     else:
         catl_info_str_mod = catl_info_str
     ## Extracting URL of the files
-    filedir  = gp.get_output_path()+'SDSS/'+catl_kind+'/'+catl_type+'/'
-    filedir += 'Mr'+sample_s+'/'+catl_info_str_mod
-    fd.Path_Folder(filedir)
+    filedir = os.path.join( gp.get_output_path(),
+                            'SDSS',
+                            catl_kind,
+                            catl_type,
+                            'Mr'+sample_s,
+                            catl_info_str_mod)
+    try:
+        assert(os.path.exists(filedir))
+    except:
+        msg = '{0} `filedir` ({1}) does not exist! Exiting'.format(
+            Program_Msg, filedir)
     if print_filedir:
         print('{0} `filedir`: {1}'.format(Program_Msg, filedir))
 
@@ -253,8 +261,8 @@ def sdss_catl_clean(catl_pd, catl_kind, catl_info='members', reindex=True):
         `cleaned` version of `catl_pd`, after having removed `failed` values
     """
     ## Mstar-ssfr `failed` values
-    ssfr_fail_arr  = [0, -99, -999]
-    mstar_fail_arr = [-1, 0]
+    ssfr_fail_arr  = [0, -99, -999, num.nan]
+    mstar_fail_arr = [-1, 0, num.nan]
     # Getting keys for catalogue
     logssfr_key, logmstar_key = catl_keys_prop(catl_kind=catl_kind,
                                                catl_info=catl_info,
@@ -346,7 +354,8 @@ def sdss_catl_clean_nmin(catl_pd, catl_kind, catl_info='members', nmin=1,
 
     return catl_pd_clean
 
-def catl_keys(catl_kind, perf_opt=False, return_type='list'):
+def catl_keys(catl_kind, catl_info='members', perf_opt=False,
+    return_type='list'):
     """
     Dictionary keys for the different types of catalogues
 
@@ -357,6 +366,12 @@ def catl_keys(catl_kind, perf_opt=False, return_type='list'):
         Options:
             - 'data': catalogues comes from SDSS 'real' catalog
             - 'mocks': catalogue(s) come from SDSS 'mock' catalogues
+
+    catl_info: string, optional (default = 'members')
+        option for choosing which kind of catalogues to use
+        Options:
+            - 'members': member galaxies of group catalogues
+            - 'groups' : catalogues with group information
 
     perf_opt: boolean, optional (default = False)
         option for using a `perfect` mock catalogue
@@ -377,25 +392,51 @@ def catl_keys(catl_kind, perf_opt=False, return_type='list'):
     if catl_kind=='data':
         perf_opt = False
 
+    ##
     ## Property keys
-    if catl_kind=='data':
-        gm_key      = 'M_h'
-        id_key      = 'groupid'
-        galtype_key = 'galtype'
-    elif catl_kind=='mocks':
-        if perf_opt:
+    ### --- Data --- ###
+    if catl_kind == 'data':
+        ## -- Groups
+        if catl_info == 'groups':
             gm_key      = 'M_h'
-            id_key      = 'haloid'
-            galtype_key = 'galtype'
-        else:
-            gm_key      = 'M_group'
             id_key      = 'groupid'
-            galtype_key = 'g_galtype'
+            galtype_key = ''
+        ## -- Members
+        elif catl_info == 'members':
+            gm_key      = 'M_h'
+            id_key      = 'groupid'
+            galtype_key = 'galtype'
+    ### --- Mocks --- ###
+    if catl_kind == 'mocks':
+        #### ---| Perfect
+        if perf_opt:
+            ## -- Groups
+            if catl_info == 'groups':
+                gm_key      = 'M_h'
+                id_key      = 'groupid'
+                galtype_key = ''
+            ## -- Members
+            elif catl_info == 'members':
+                gm_key      = 'M_h'
+                id_key      = 'groupid'
+                galtype_key = 'galtype'
+        #### ---| Not Perfect
+        else:
+            ## -- Groups
+            if catl_info == 'groups':
+                gm_key      = 'M_group'
+                id_key      = 'groupid'
+                galtype_key = ''
+            ## -- Members
+            elif catl_info == 'members':
+                gm_key      = 'M_group'
+                id_key      = 'groupid'
+                galtype_key = 'g_galtype'
     # Saving values 
-    if return_type=='dict':
+    if return_type == 'dict':
         catl_dict = {'gm_key':gm_key,'id_key':id_key,'galtype_key':galtype_key}
-    elif return_type=='list':
-        catl_dict=[gm_key, id_key, galtype_key]
+    elif return_type == 'list':
+        catl_dict = [gm_key, id_key, galtype_key]
 
     return catl_dict
 
