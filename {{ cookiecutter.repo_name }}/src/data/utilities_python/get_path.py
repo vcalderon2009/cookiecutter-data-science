@@ -14,8 +14,8 @@ __author__     =['Victor Calderon']
 __copyright__  =["Copyright 2017 Victor Calderon, get_path"]
 __email__      =['victor.calderon@vanderbilt.edu']
 __maintainer__ =['Victor Calderon']
-__all__        =["get_system", "get_base_path", "get_code_c", "get_data_path",\
-                 "get_output_path", "get_plot_path", "git_root_dir",
+__all__        =["get_system", "get_base_path", "get_code_c",\
+                 "get_output_path", "git_root_dir",
                  "cookiecutter_paths"]
 
 # Importing modules
@@ -51,13 +51,16 @@ def get_base_path(node=None):
     get the base path for the system
     """
     if node==None: node = get_system()
-
-    if node=='bender':
-        path = '/fs1/caldervf/CODES/vandy_group_statistics2/'
-    elif node=='Victors-MacBook-Pro-2':
-        path = '/Users/victor2/Documents/REPOSITORIES/vandy_group_statistics2/'
-    else:
-        return 'error: unknown data directory for this enviorment!' 
+    ##
+    ## Base path
+    try:
+        path = os.environ['sdss_catl_path']
+        assert(os.path.exists(path))
+    except:
+        proj_dict = cookiecutter_paths(__file__)
+        ##
+        ## Path to `base`
+        path = proj_dict['base_dir']
 
     return path
 
@@ -75,49 +78,14 @@ def get_code_c(node=None):
 
     return path
 
-def get_data_path(node=None):
-    """
-    get the base path to data storage for the system
-    """
-    if node==None: node = get_system()
-
-    if node=='bender':
-        path = get_base_path()+'datafiles/'
-    elif node=='Victors-MacBook-Pro-2':
-        path = get_base_path()+'datafiles/'
-    else:
-        return 'error: unknown data directory for this enviorment!'
-
-    return path
-
 def get_output_path(node=None):
     """
     get the base path to get_output_path storage for the system
     """
     if node==None: node = get_system()
 
-    if node=='bender':
-        path = get_base_path()+'processed_data/'
-    elif node=='Victors-MacBook-Pro-2':
-        path = get_base_path()+'processed_data/'
-    else:
-        return 'error: unknown data directory for this enviorment!'
-
-    return path
-
-def get_plot_path(node=None):
-    """
-    get the base path to plot storage for the system
-    """
-    if node==None: node = get_system()
-
-    if node=='bender':
-        path = get_base_path()+'plots/'
-    elif node=='Victors-MacBook-Pro-2':
-        path = get_base_path()+'plots/'
-    else:
-        return 'error: unknown data directory for this environment!'
-
+    path = os.path.join(get_base_path(),'data','processed')
+    
     return path
 
 ## Based on the `Data Science` Cookiecutter Template
