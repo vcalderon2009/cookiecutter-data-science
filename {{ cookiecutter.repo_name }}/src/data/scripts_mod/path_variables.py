@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 
 # Victor Calderon
-# Created      : 11/12/2017
-# Last Modified: 11/12/2017
+# Created      : DATE
+# Last Modified: DATE
 # Vanderbilt University
 from __future__ import (print_function, division, 
                             absolute_import)
 __author__     =['Victor Calderon']
-__copyright__  =["Copyright 2017 Victor Calderon, "]
+__copyright__  =["Copyright 2017 Victor Calderon, Path Variables"]
 __email__      =['victor.calderon@vanderbilt.edu']
 __maintainer__ =['Victor Calderon']
 __all__        =["git_root_dir"]
@@ -43,3 +43,6 @@ def git_root_dir(path='./'):
     git_root = git_repo.git.rev_parse("--show-toplevel")
 
     return git_root
+
+## Adding path to `sys`
+sys.path.insert(0, os.path.realpath(git_root_dir(__file__)))
