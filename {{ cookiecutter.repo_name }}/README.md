@@ -21,14 +21,9 @@ $:  make show-help
     Available rules:
     
     clean               Delete all compiled Python files
-    create_environment  Set up python interpreter environment
-    data                Make Dataset
     environment         Set up python interpreter environment - Using environment.yml
     lint                Lint using flake8
     remove_environment  Delete python interpreter environment
-    requirements        Install Python Dependencies
-    sync_data_from_s3   Download Data from S3
-    sync_data_to_s3     Upload Data to S3
     test_environment    Test python environment is setup correctly
     update_environment  Update python interpreter environment
 ```
