@@ -91,6 +91,9 @@ Project Organization
     │   ├── __init__.py    <- Makes src a Python module
     │   │
     │   ├── data           <- Scripts to download or generate data
+    │   │   │
+    │   │   ├── utilities_python    <- General Python scripts to make the flow of the project a little easier.
+    │   │   │
     │   │   └── make_dataset.py
     │   │
     │   ├── features       <- Scripts to turn raw data into features for modeling
