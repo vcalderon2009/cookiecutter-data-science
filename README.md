@@ -26,7 +26,13 @@ $ conda install cookiecutter
 ### To start a new project, run:
 ------------
 
+    cookiecutter https://github.com/vcalderon2009/cookiecutter-data-science
+
+Or if you want the __default__ project scheme from *DrivenData*, run:
+
     cookiecutter https://github.com/drivendata/cookiecutter-data-science
+
+Depending on what kind of folder structure you want, you might want to choose from the different types.
 
 
 [![asciicast](https://asciinema.org/a/9bgl5qh17wlop4xyxu9n9wr02.png)](https://asciinema.org/a/9bgl5qh17wlop4xyxu9n9wr02)
