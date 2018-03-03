@@ -60,7 +60,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'{{ cookiecutter.project_name }}'
 
-author = u'{{cookiecutter.author_name}} <{{}}> '
+author = u'{{cookiecutter.author_name}} <{{cookiecutter.author_email}}> '
 current_year = date.today().year
 copyright = u'2017-{0}, {1}'.format(current_year, author)
 
