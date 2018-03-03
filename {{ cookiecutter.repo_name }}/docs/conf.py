@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 # -*- coding: utf-8 -*-
 #
 # {{ cookiecutter.project_name }} documentation build configuration file, created by
