@@ -24,17 +24,17 @@ def _reversed_arrays(x,y):
 
 	Parameters
 	----------
-	x: array_like
+	x : array_like
 		numpy.array containing `x` values
 
-	y: array_like
+	y : array_like
 		numpy.array containing elements `y(x)` related to `x`
 
 	Returns
 	-------
-	rel: boolean
-		- rel==True: if `x` increases with increasing `y(x)` monotonically
-		- rel==False: if `x` decreases with increasing `y(x)` monotonically
+	rel : boolean
+		- rel==True : if `x` increases with increasing `y(x)` monotonically
+		- rel==False : if `x` decreases with increasing `y(x)` monotonically
 	"""
 	x = num.array(x)
 	y = num.array(y)
@@ -56,15 +56,15 @@ def _monotonic_arrays(x,y):
 
 	Parameters
 	----------
-	x: array_like
+	x : array_like
 		numpy.array containing `x` values
 
-	y: array_like
+	y : array_like
 		numpy.array containing elements `y(x)` related to `x`
 
 	Returns
 	-------
-	rel: boolean
+	rel : boolean
 		- rel==True if increasing monotonically
 		- rel==False if decreasing monotonically
 	"""
@@ -91,33 +91,33 @@ def abundance_matching_f(dict1, dict2, volume1=1., volume2=1.,
 
     Parameters
     ----------
-    dict1: dictionary_like, or array_like
+    dict1 : dictionary_like, or array_like
         Dictionary of property 1
-        - Keys: `var`: First variable to be analyzed
+        - Keys : `var`: First variable to be analyzed
                 `dens`: Density array corresponding to `var` elements.
                         Given if dens1==True
 
-    dict2: dictionary_like, or array_like
+    dict2 : dictionary_like, or array_like
         Dictionary of property 2
         - Keys: `var`: First variable to be analyzed
                 `dens`: Density array corresponding to `var` elements.
                         Given if dens1==True
 
-    volume1: float
+    volume1 : float
         volume corresponding to dict1
 
-    reverse: boolean
+    reverse : boolean
         Determines the relation between var1 and var2.
-        - reverse==True: var1 increases with increasing var2
-        - reverse==False: var1 decreases with increasing var2
+        - reverse==True : var1 increases with increasing var2
+        - reverse==False : var1 decreases with increasing var2
 
-    dens1_opt: boolean, default=False
-        - If 'True': density is already provided as key for `dict1`
-        - If 'False': density must me calculated
+    dens1_opt : boolean, default=False
+        - If 'True' : density is already provided as key for `dict1`
+        - If 'False' : density must me calculated
 
     Returns
     -------
-    var1_ab: array_like
+    var1_ab : array_like
         numpy.array of elements matching those of `dict1`, after matching with 
         dict2.
     """
@@ -152,25 +152,25 @@ def cumulative_function(var,volume=1.,reverse=True, dens=True):
 
     Parameters
     ----------
-    var: array_like
+    var : array_like
         variable to be analyzed
 
-    volume: float
+    volume : float
         volume of the survey. Used to calculate densities
 
-    reverse: boolean, (default=True)
+    reverse : boolean, (default=True)
         Determines the relation of var and density
-        - reverse==True : as var increases, dens decreases
-        - reverse==False: as var increases, dens increases
+        - reverse==True  : as var increases, dens decreases
+        - reverse==False : as var increases, dens increases
 
-    dens: boolean, (default=True)
+    dens : boolean, (default=True)
         Option to return counts or densities
-        - dens==True: Return densities
-        - dens==False: Return actual counts
+        - dens==True : Return densities
+        - dens==False : Return actual counts
 
      Returns
      -------
-     y_x: array_like
+     y_x : array_like
         Cumulative function of number counts or densities, depending of `dens`
     """
     var = num.array(var)
