@@ -19,3 +19,4 @@ dependencies:
     - GitPython
     - progressbar2
     - sphinx_rtd_theme
+    - cosmo-utils
