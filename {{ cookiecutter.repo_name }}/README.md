@@ -87,12 +87,13 @@ Project Organization
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
     │
+    ├── environment.yml    <- The Anaconda environment requirements file for reproducing the analysis environment.
+    │                         This file is used by Anaconda to create the project environment.
+    │
     ├── src                <- Source code for use in this project.
     │   ├── __init__.py    <- Makes src a Python module
     │   │
     │   ├── data           <- Scripts to download or generate data
-    │   │   │
-    │   │   ├── utilities_python    <- General Python scripts to make the flow of the project a little easier.
     │   │   │
     │   │   └── make_dataset.py
     │   │

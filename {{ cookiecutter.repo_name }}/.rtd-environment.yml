@@ -1,0 +1,23 @@
+name: {{ cookiecutter.conda_python_env}}
+
+channels:
+    - defaults
+    - conda-forge
+    - astropy
+
+dependencies:
+    - python >= 3
+    - anaconda
+    - astropy
+    - h5py
+    - numpy
+    - pandas
+    - matplotlib
+    - scipy
+    - seaborn
+    - sphinx
+    - pip
+    - pip:
+        - GitPython
+        - sphinx_rtd_theme
+        - cosmo-utils
