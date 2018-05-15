@@ -69,6 +69,7 @@ update_environment:
 ifeq (True,$(HAS_CONDA))
 		@echo ">>> Detected conda, creating conda environment."
 		conda env update -f $(ENVIRONMENT_FILE)
+		pip install --upgrade cosmo-utils
 endif
 
 ## Delete python interpreter environment
