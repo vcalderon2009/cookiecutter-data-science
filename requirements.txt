@@ -2,3 +2,5 @@ mkdocs
 mkdocs-cinder
 cookiecutter>=1.6
 pytest
+gitpython
+sphinx
