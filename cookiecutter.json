@@ -17,4 +17,6 @@
     "sphinx_theme": "astropy-boostrap",
     "initialize_git_repo": "y",
     "project_url": "http://astropy.org",
+    "minimum_python_version": ["3.6", "3.5"],
+    "astropy_helpers_version": "{% if cookiecutter.minimum_python_version == '2.7' %}v2.0.6{% else %}v3.0.1{% endif %}"
 }
