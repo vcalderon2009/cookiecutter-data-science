@@ -7,7 +7,7 @@
 
 {{cookiecutter.description}}
 
-**Author**: {{ cookiecutter.authorname }}(`{{cookiecutter.author_email}} <mailto:{{cookiecutter.author_email}}>`_)
+**Author**: {{ cookiecutter.author_name }}(`{{cookiecutter.author_email}} <mailto:{{cookiecutter.author_email}}>`_)
 
 
 .. contents:: **Table of Contents**
