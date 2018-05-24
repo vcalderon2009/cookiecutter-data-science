@@ -3,7 +3,7 @@
 
 {{cookiecutter.description}}
 
-**Author**: Victor Calderon ([victor.calderon@vanderbilt.edu](mailto:victor.calderon@vanderbilt.edu))
+**Author**: {{ cookiecutter.author_name }} ([{{ cookiecutter.author_email }}](mailto:{{cookiecutter.author_email}}))
 
 ## Installing Environment & Dependencies
 
