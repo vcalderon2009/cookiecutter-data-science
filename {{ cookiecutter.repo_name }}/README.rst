@@ -5,7 +5,7 @@
 {{cookiecutter.project_name}}
 ************************************************************************
 
-{{cookiecutter.description}}
+{{cookiecutter.short_description}}
 
 **Author**: {{ cookiecutter.author_name }}(`{{cookiecutter.author_email}} <mailto:{{cookiecutter.author_email}}>`_)
 
