@@ -3,6 +3,8 @@ mkdocs-cinder
 cookiecutter>=1.6
 pytest
 gitpython
-sphinx
+sphinx>=1.6
 md-condition
 configparser
+sphinx-automodapi
+numpydoc

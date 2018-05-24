@@ -6,7 +6,7 @@ channels:
     - astropy
 
 dependencies:
-    - python >= 3
+    - python >= python>={{cookiecutter.minimum_python_version}}
     - anaconda
     - astropy
     - h5py
@@ -15,10 +15,12 @@ dependencies:
     - matplotlib
     - scipy
     - seaborn
-    - sphinx
+    - sphinx >= 1.6
     - pip
     - pip:
         - GitPython
         - sphinx_rtd_theme
         - cosmo-utils
         - configparser
+        - sphinx-automodapi
+        - numpydoc

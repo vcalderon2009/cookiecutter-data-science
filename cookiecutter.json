@@ -14,9 +14,9 @@
     "project_version": "0.0.dev0",
     "use_travis_ci": "y",
     "use_read_the_docs": "y",
-    "sphinx_theme": "astropy-boostrap",
     "initialize_git_repo": "y",
     "project_url": "http://astropy.org",
     "minimum_python_version": ["3.6", "3.5"],
-    "astropy_helpers_version": "{% if cookiecutter.minimum_python_version == '2.7' %}v2.0.6{% else %}v3.0.1{% endif %}"
+    "astropy_helpers_version": "{% if cookiecutter.minimum_python_version == '2.7' %}v2.0.6{% else %}v3.0.1{% endif %}",
+    "use_astropy_theme_or_RTD": ["RTD", "Astropy"]
 }
