@@ -55,7 +55,7 @@ def process_conf_docs():
 
 if __name__ == '__main__':
 
-    process_licence('{{ cookiecutter.license }}')
+    process_licence('{{ cookiecutter.open_source_license }}')
 
     if '{{ cookiecutter.use_travis_ci }}' != 'y':
         remove_file('.travis.yml')
