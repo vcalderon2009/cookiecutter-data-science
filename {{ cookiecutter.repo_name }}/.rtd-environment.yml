@@ -21,3 +21,4 @@ dependencies:
         - GitPython
         - sphinx_rtd_theme
         - cosmo-utils
+        - configparser

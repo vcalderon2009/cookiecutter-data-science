@@ -4,3 +4,5 @@ cookiecutter>=1.6
 pytest
 gitpython
 sphinx
+md-condition
+configparser

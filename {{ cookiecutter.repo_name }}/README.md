@@ -1,3 +1,6 @@
+[![Documentation Status](https://readthedocs.org/projects/{{cookiecutter.repo_name}}/badge/?version=latest)](https://{{cookiecutter.repo_name}}.readthedocs.io/en/latest/?badge=latest)
+
+
 {{cookiecutter.project_name}}
 ==============================
 
