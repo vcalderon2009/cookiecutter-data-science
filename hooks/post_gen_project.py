@@ -67,6 +67,9 @@ if __name__ == '__main__':
         remove_file('.rtd-environment.yml')
         remove_file('readthedocs.yml')
     ##
+    ## Documentation
+    process_conf_docs()
+    ##
     ## Astropy Helpers
     try:
         from git import Repo
