@@ -17,7 +17,8 @@ def import_pkgs(pkg):
     print('>> Checking {0}'.format(pkg))
     ## Installing packages
     try:
-        os.system('pip -q install {0}'.format(pkg))
+        print('pip -q install {0}'.format(pkg))
+        # os.system('pip -q install {0}'.format(pkg))
     except:
         msg = '`pkg` ({0}) not found!'.format(pkg)
         raise ValueError(msg)
@@ -34,7 +35,7 @@ def main():
         raise ImportError(msg)
     ##
     ## Project directory
-    PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
+    PROJECT_DIRECTORY = os.path.relpath(os.path.curdir)
     ##
     ## Reading in list of packages
     reqfile = os.path.join(PROJECT_DIRECTORY, 'requirements.txt')
@@ -42,12 +43,12 @@ def main():
         msg = '`reqfile` ({0}) was not found!'.format(reqfile)
         raise ValueError(msg)
     ##
-    ## Parsing packages needed
-    with open(reqfile, 'r') as req_f:
-        req_f_pkgs = req_f.readlines()
-        req_f_pkgs = [x.strip() for x in req_f_pkgs]
-        for pkg_ii in req_f_pkgs:
-            import_pkgs(pkg_ii)
+    ## Running `install requirements.txt`
+    try:
+        os.system('pip install -r {0}'.format(reqfile))
+    except:
+        msg = 'Could not install requirements!!'
+        raise ValueError(msg)
 
 if __name__ == '__main__':
     main()
