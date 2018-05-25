@@ -70,7 +70,7 @@ rst_epilog += """
 
 # This does not *have* to match the package name, but typically does
 project = setup_cfg['project_name']
-author = setup_cfg['author_name'] <setup_cfg['author_email']>
+author    = '{0} <{1}>'.format(setup_cfg['author_name'], setup_cfg['author_email'])
 copyright = '{0}, {1}'.format(
     datetime.datetime.now().year, setup_cfg['author_name'])
 

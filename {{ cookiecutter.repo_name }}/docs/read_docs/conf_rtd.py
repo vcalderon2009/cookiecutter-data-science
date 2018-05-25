@@ -14,7 +14,7 @@
 
 import os
 import sys
-from datetime import date
+import datetime
 import sphinx_rtd_theme
 
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
@@ -75,7 +75,7 @@ master_doc = 'index'
 
 # General information about the project.
 project   = setup_cfg['project_name']
-author    = setup_cfg['author_name'] <setup_cfg['author_email']>
+author    = '{0} <{1}>'.format(setup_cfg['author_name'], setup_cfg['author_email'])
 copyright = '{0}, {1}'.format(
     datetime.datetime.now().year, setup_cfg['author_name'])
 
