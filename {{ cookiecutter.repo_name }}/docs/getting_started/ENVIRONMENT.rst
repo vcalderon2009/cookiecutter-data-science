@@ -1,6 +1,7 @@
 |RTD| |License| |Issues|
 
 .. _ENVIRONMENT_MAIN:
+
 ***********************************
 Using the Project's environment
 ***********************************
@@ -13,6 +14,7 @@ Using the Project's environment
     :local:
 
 .. _env_install_subsec:
+
 Installing Environment & Dependencies
 =====================================
 
@@ -27,6 +29,7 @@ You must use this Makefile to ensure that you have all of the necessary
 *dependencies*, as well the correct **conda environment**.
 
 .. _env_makefile_funcs:
+
 Show all available functions in the Makefile
 --------------------------------------------
 
@@ -52,6 +55,7 @@ To show all available functions in the Makefile, run:
     update_environment  Update python interpreter environment
 
 .. _create_env:
+
 Create environment
 -------------------
 
@@ -71,6 +75,7 @@ The main file that lists all of the dependencies for the project can
 be found as ``environment.yml``.
 
 .. _activate_env:
+
 Activating the environment
 ----------------------------
 
@@ -93,6 +98,7 @@ environment by typing
     instead.
 
 .. _updating_env:
+
 Updating environment
 --------------------
 
@@ -109,6 +115,7 @@ You can updated the project's environments by running:
 This will update the versions of each of the necessary packages.
 
 .. _deactivating_env:
+
 Deactivating environment
 -------------------------
 
@@ -131,6 +138,7 @@ Once you are done running the scripts of this project, you should
     instead.
 
 .. _auto_activate_env:
+
 Auto-activate environment
 -------------------------
 

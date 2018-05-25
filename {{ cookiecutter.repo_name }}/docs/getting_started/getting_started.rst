@@ -1,6 +1,7 @@
 |RTD| |License| |Issues|
 
 .. _GETTING_STARTED:
+
 *****************
 Getting Started
 *****************

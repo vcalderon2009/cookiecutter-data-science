@@ -1,6 +1,7 @@
 |RTD| |License| |Issues|
 
 .. _INSTALL_MAIN:
+
 ************************************************************************
 Downloading and Installing
 ************************************************************************
@@ -13,6 +14,7 @@ Downloading and Installing
     :local:
 
 .. _donwload_repo_sec:
+
 ======================
 Downloading repository
 ======================

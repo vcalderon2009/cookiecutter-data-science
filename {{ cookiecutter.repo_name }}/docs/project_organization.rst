@@ -1,4 +1,5 @@
 .. _proj_structure:
+
 =================
 Project Structure
 =================

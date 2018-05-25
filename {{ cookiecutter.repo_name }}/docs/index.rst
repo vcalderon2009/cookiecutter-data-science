@@ -1,6 +1,7 @@
 |RTD| |License| |Issues|
 
 .. _MAIN_SEC:
+
 ************************************************************************
 {{cookiecutter.project_name}} Documentation
 ************************************************************************
@@ -14,6 +15,7 @@ This documentation is part of the repository
 
 
 .. _MAIN_SEC_CONTENTS:
+
 ========
 Contents
 ========
