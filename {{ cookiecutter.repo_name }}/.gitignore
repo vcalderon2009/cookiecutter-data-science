@@ -73,6 +73,9 @@ target/
 /data/
 *__pycache__*
 
+# Extra requirements
+requirements_pre.txt
+
 ##### Including files #####
 !.rtd-environment.yml
 !.gitignore
