@@ -34,7 +34,7 @@ You can use the *Makefile* for running common tasks like
 
 To show all available functions in the Makefile, run:
 
-.. code-block:: console
+.. code-block:: text
 
     make show-help
 
@@ -62,7 +62,7 @@ The name of the environment and its dependencies are explicitely shown in the
 ``environment.yml`` file.
 In order to create the environment, you must run:
 
-.. code-block:: console
+.. code-block:: text
 
     make environment
 
@@ -76,7 +76,7 @@ Activating the environment
 Once the environment has been **installed**, you can now *activate* the 
 environment by typing
 
-.. code-block:: console
+.. code-block:: text
 
     source activate {{cookiecutter.conda_python_env}}
 
@@ -85,7 +85,7 @@ environment by typing
     Depending on your installation of Anaconda, you might have to use the 
     command: 
 
-    .. code-block:: console
+    .. code-block:: text
     
         conda activate {{cookiecutter.conda_python_env}}
 
@@ -101,7 +101,7 @@ need to updaetd.
 
 You can updated the project's environments by running:
 
-.. code-block:: console
+.. code-block:: text
 
     make update_environment
 
@@ -114,7 +114,7 @@ Deactivating environment
 Once you are done running the scripts of this project, you should 
 **deactivate** the environment. To do so, run:
 
-.. code-block:: console
+.. code-block:: text
 
     source deactivate
 
@@ -123,7 +123,7 @@ Once you are done running the scripts of this project, you should
     Depending on your installation of Anaconda, you might have to use the 
     command: 
 
-    .. code-block:: console
+    .. code-block:: text
     
         conda deactivate
 
@@ -217,6 +217,48 @@ Project based on the `modified <https://github.com/vcalderon2009/cookiecutter-da
    :target: http://{{cookiecutter.repo_name}}.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
 
-.. |License| image:: https://img.shields.io/badge/license-{{cookiecutter.open_source_license}}-brightgreen.svg
-   :target: https://github.com/{{cookiecutter.github_project}}/LICENSE.rst
+{% if cookiecutter.open_source_license == "BSD 3-Clause" %}
+.. |License| image:: https://img.shields.io/badge/License-BSD%203--Clause-blue.svg
+   :target: https://github.com/{{cookiecutter.github_project}}/blob/master/LICENSE.rst
    :alt: Project License
+{% endif %}
+
+{% if cookiecutter.open_source_license == "GNU GPL v3+" %}
+.. |License| image:: https://img.shields.io/badge/license-GNU%20GPL%20v3%2B-blue.svg
+   :target: https://github.com/{{cookiecutter.github_project}}/blob/master/LICENSE.rst
+   :alt: Project License
+{% endif %}
+
+{% if cookiecutter.open_source_license == "Apache Software Licence 2.0" %}
+.. |License| image:: https://img.shields.io/badge/license-Apache%20Software%20Licence%202.0-blue.svg
+   :target: https://github.com/{{cookiecutter.github_project}}/blob/master/LICENSE.rst
+   :alt: Project License
+{% endif %}
+
+{% if cookiecutter.open_source_license == "BSD 2-Clause" %}
+.. |License| image:: https://img.shields.io/badge/license-BSD%202--Clause-blue.svg
+   :target: https://github.com/{{cookiecutter.github_project}}/blob/master/LICENSE.rst
+   :alt: Project License
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
