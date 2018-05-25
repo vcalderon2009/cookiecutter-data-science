@@ -4,7 +4,6 @@ cookiecutter>=1.6
 pytest
 gitpython
 sphinx>=1.6
-md-condition
 configparser
 sphinx-automodapi
 numpydoc
