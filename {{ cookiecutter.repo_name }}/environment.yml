@@ -18,8 +18,11 @@ dependencies:
   - pip:
     - GitPython
     - progressbar2
-    - sphinx_rtd_theme
     - cosmo-utils
     - configparser
+{% if cookiecutter.use_astropy_theme_or_RTD == "RTD" %}
+    - sphinx_rtd_theme
+{% endif %}
+{% if cookiecutter.use_astropy_theme_or_RTD == "Astropy" %}
     - sphinx-astropy
-    - numpydoc
+{% endif %}
