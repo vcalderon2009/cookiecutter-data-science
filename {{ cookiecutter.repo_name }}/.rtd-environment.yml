@@ -19,8 +19,13 @@ dependencies:
     - pip
     - pip:
         - GitPython
-        - sphinx_rtd_theme
         - cosmo-utils
         - configparser
-        - sphinx-astropy
-        - numpydoc
+{% if cookiecutter.use_astropy_theme_or_RTD == "RTD" %}
+    - sphinx_rtd_theme
+    - numpydoc
+{% endif %}
+{% if cookiecutter.use_astropy_theme_or_RTD == "Astropy" %}
+    - sphinx-astropy
+{% endif %}
+        

@@ -22,6 +22,7 @@ dependencies:
     - configparser
 {% if cookiecutter.use_astropy_theme_or_RTD == "RTD" %}
     - sphinx_rtd_theme
+    - numpydoc
 {% endif %}
 {% if cookiecutter.use_astropy_theme_or_RTD == "Astropy" %}
     - sphinx-astropy
