@@ -15,10 +15,6 @@ dependencies:
     - pip:
         - GitPython
         - configparser
-{% if cookiecutter.use_astropy_theme_or_RTD == "RTD" %}
-        - sphinx_rtd_theme
-        - numpydoc
-{% else %}
         - sphinx-astropy
-{% endif %}
+        - sphinx_rtd_theme
         
