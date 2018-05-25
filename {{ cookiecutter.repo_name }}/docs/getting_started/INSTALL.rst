@@ -1,28 +1,41 @@
 |RTD| |License| |Issues|
 
-.. _MAIN_SEC:
+.. _INSTALL_MAIN:
 ************************************************************************
-{{cookiecutter.project_name}} Documentation
+{{cookiecutter.project_name}}
 ************************************************************************
 
 {{cookiecutter.short_description}}
 
 **Author**: {{ cookiecutter.author_name }} (`{{cookiecutter.author_email}} <mailto:{{cookiecutter.author_email}}>`_)
 
+.. contents:: **Table of Contents**
+    :local:
+
+.. _donwload_repo_sec:
+======================
+Downloading repository
+======================
+
 This documentation is part of the repository
 `{{cookiecutter.repo_name}} <https://github.com/{{cookiecutter.github_project}}>`_.
 
+To download the repository to your computer, follow the following commands.
 
-.. _MAIN_SEC_CONTENTS:
-========
-Contents
-========
 
-.. toctree::
-  :maxdepth: 2
+.. code-block:: text
 
-  getting_started/getting_started
-  project_organization
+    cd /path/to/where/you/want/to/download/repo
+    git clone https://github.com/{{github_project}}.git
+    cd {{cookiecutter.repo_name}}
+
+
+The next step is to install and activate the project environment before 
+being able to run any of the project's commands.
+
+See :ref:`ENVIRONMENT_MAIN` for more information.
+
+
 
 
 .. |Issues| image:: https://img.shields.io/github/issues/{{cookiecutter.github_project}}.svg

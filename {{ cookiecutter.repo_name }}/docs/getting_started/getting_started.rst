@@ -1,29 +1,20 @@
 |RTD| |License| |Issues|
 
-.. _MAIN_SEC:
+.. _GETTING_STARTED:
 ************************************************************************
-{{cookiecutter.project_name}} Documentation
+{{cookiecutter.project_name}}
 ************************************************************************
 
 {{cookiecutter.short_description}}
 
 **Author**: {{ cookiecutter.author_name }} (`{{cookiecutter.author_email}} <mailto:{{cookiecutter.author_email}}>`_)
 
-This documentation is part of the repository
-`{{cookiecutter.repo_name}} <https://github.com/{{cookiecutter.github_project}}>`_.
 
+.. contents:: **Table of Contents**
+    :local:
 
-.. _MAIN_SEC_CONTENTS:
-========
-Contents
-========
-
-.. toctree::
-  :maxdepth: 2
-
-  getting_started/getting_started
-  project_organization
-
+    INSTALL
+    ENVIRONMENT
 
 .. |Issues| image:: https://img.shields.io/github/issues/{{cookiecutter.github_project}}.svg
    :target: https://github.com/{{cookiecutter.github_project}}/issues
