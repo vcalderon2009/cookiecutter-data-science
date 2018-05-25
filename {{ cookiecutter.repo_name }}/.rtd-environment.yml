@@ -6,7 +6,7 @@ channels:
     - astropy
 
 dependencies:
-    - python >= python>={{cookiecutter.minimum_python_version}}
+    - python>={{cookiecutter.minimum_python_version}}
     - anaconda
     - astropy
     - h5py
