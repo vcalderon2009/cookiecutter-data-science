@@ -22,6 +22,7 @@ Contents
   :maxdepth: 2
 
   getting_started/getting_started
+  commands
   project_organization
 
 
