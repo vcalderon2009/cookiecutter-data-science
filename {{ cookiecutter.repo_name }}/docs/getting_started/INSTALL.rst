@@ -18,7 +18,7 @@ Downloading repository
 ======================
 
 This documentation is part of the repository
-`{{cookiecutter.repo_name}} <https://github.com/{{cookiecutter.github_project}}>`_.
+`{{cookiecutter.repo_name}} <https://github.com/{{ cookiecutter.github_project }}>`_.
 
 To download the repository to your computer, follow the following commands.
 
@@ -26,7 +26,7 @@ To download the repository to your computer, follow the following commands.
 .. code-block:: text
 
     cd /path/to/where/you/want/to/download/repo
-    git clone https://github.com/{{github_project}}.git
+    git clone https://github.com/{{ cookiecutter.github_project }}.git
     cd {{cookiecutter.repo_name}}
 
 
