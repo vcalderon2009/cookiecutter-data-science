@@ -22,9 +22,9 @@ dependencies:
         - cosmo-utils
         - configparser
 {% if cookiecutter.use_astropy_theme_or_RTD == "RTD" %}
-    - sphinx_rtd_theme
-    - numpydoc
+        - sphinx_rtd_theme
+        - numpydoc
 {% else %}
-    - sphinx-astropy
+        - sphinx-astropy
 {% endif %}
         

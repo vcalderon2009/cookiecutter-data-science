@@ -4,25 +4,25 @@ channels:
   - defaults
 
 dependencies:
-  - python>={{cookiecutter.minimum_python_version}}
-  - ipython
-  - anaconda
-  - astropy
-  - h5py
-  - numpy
-  - pandas
-  - scipy
-  - seaborn
-  - sphinx >= 1.6
-  - pip
-  - pip:
-    - GitPython
-    - progressbar2
-    - cosmo-utils
-    - configparser
+    - python>={{cookiecutter.minimum_python_version}}
+    - ipython
+    - anaconda
+    - astropy
+    - h5py
+    - numpy
+    - pandas
+    - scipy
+    - seaborn
+    - sphinx >= 1.6
+    - pip
+    - pip:
+        - GitPython
+        - progressbar2
+        - cosmo-utils
+        - configparser
 {% if cookiecutter.use_astropy_theme_or_RTD == "RTD" %}
-    - sphinx_rtd_theme
-    - numpydoc
+        - sphinx_rtd_theme
+        - numpydoc
 {% else %}
-    - sphinx-astropy
+        - sphinx-astropy
 {% endif %}
