@@ -63,6 +63,9 @@ if __name__ == '__main__':
     if '{{ cookiecutter.use_read_the_docs }}' != 'y':
         remove_file('.rtd-environment.yml')
         remove_file('readthedocs.yml')
+    ##
+    ##
+    process_conf_docs()
 
     ##
     ## Astropy Helpers
