@@ -46,10 +46,10 @@ def process_conf_docs():
     Selects the correct `conf.py` file for the project documentation.
     """
     if '{{ cookiecutter.use_astropy_theme_or_RTD }}' == 'RTD':
-        shutil.copyfile(os.path.join(PROJECT_DIRECTORY, 'docs', 'read_docs', 'conf_rtd.rst'),
+        shutil.copyfile(os.path.join(PROJECT_DIRECTORY, 'docs', 'read_docs', 'conf_rtd.py'),
                         os.path.join(PROJECT_DIRECTORY, 'docs', 'conf.py'))
-    if '{{ cookiecutter.use_astropy_theme_or_RTD }}' == 'RTD':
-        shutil.copyfile(os.path.join(PROJECT_DIRECTORY, 'docs', 'read_docs', 'conf_rtd.rst'),
+    if '{{ cookiecutter.use_astropy_theme_or_RTD }}' == 'Astropy':
+        shutil.copyfile(os.path.join(PROJECT_DIRECTORY, 'docs', 'read_docs', 'conf_rtd.py'),
                         os.path.join(PROJECT_DIRECTORY, 'docs', 'conf.py'))
     ##
     ## Removing `read_docs` folder
