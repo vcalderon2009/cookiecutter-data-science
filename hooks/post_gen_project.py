@@ -22,7 +22,8 @@ PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 license_files = {"BSD 3-Clause": 'BSD3.rst',
                  "GNU GPL v3+": 'GPLv3.rst',
                  "Apache Software Licence 2.0": 'APACHE2.rst',
-                 "BSD 2-Clause": 'BSD2.rst'}
+                 "BSD 2-Clause": 'BSD2.rst',
+                 "MIT": 'MIT.rst'}
 
 
 def process_licence(licence_name):
