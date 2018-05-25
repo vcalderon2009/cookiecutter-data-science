@@ -45,7 +45,7 @@ def process_conf_docs():
     """
     Selects the correct `conf.py` file for the project documentation.
     """
-    if '{{ cookiecutter.use_astropy_theme_or_RTD}}' == 'RTD':
+    if '{{ cookiecutter.use_astropy_theme_or_RTD }}' == 'RTD':
         shutil.copyfile(os.path.join(PROJECT_DIRECTORY, 'docs', 'read_docs', 'conf_rtd.rst'),
                         os.path.join(PROJECT_DIRECTORY, 'docs', 'conf.py'))
     ##
@@ -74,7 +74,7 @@ if __name__ == '__main__':
         new_repo.index.commit(
             "Creation of {{ cookiecutter.repo_name }} from astropy package template"
         )
-        if '{{{cookiecutter.use_astropy_theme_or_RTD}}}' == 'Astropy':
+        if '{{cookiecutter.use_astropy_theme_or_RTD}}' == 'Astropy':
             astropy_helpers_version = "{% if cookiecutter.minimum_python_version == '2.7' %}v2.0.6{% else %}v3.0.1{% endif %}"
             Repo.create_submodule(
                 new_repo, "astropy_helpers", "astropy_helpers",
