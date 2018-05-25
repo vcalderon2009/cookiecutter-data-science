@@ -14,7 +14,6 @@ def import_pkgs(pkg):
         Name of the package to install
     """
     ## Message for `pkg`
-    pkg = pkg.decode('utf-8')
     print('>> Checking {0}'.format(pkg))
     ## Installing packages
     try:
@@ -44,10 +43,11 @@ def main():
         raise ValueError(msg)
     ##
     ## Parsing packages needed
-    with open(reqfile, 'rb') as req_f:
+    with open(reqfile, 'r') as req_f:
         req_f_pkgs = req_f.readlines()
+        req_f_pkgs = [x.strip() for x in req_f_pkgs]
         for pkg_ii in req_f_pkgs:
             import_pkgs(pkg_ii)
 
-if __name__=='__main__':
+if __name__ == '__main__':
     main()
