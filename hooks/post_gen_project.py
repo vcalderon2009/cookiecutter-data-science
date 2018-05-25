@@ -49,7 +49,7 @@ def process_conf_docs():
         shutil.copyfile(os.path.join(PROJECT_DIRECTORY, 'docs', 'read_docs', 'conf_rtd.py'),
                         os.path.join(PROJECT_DIRECTORY, 'docs', 'conf.py'))
     if '{{ cookiecutter.use_astropy_theme_or_RTD }}' == 'Astropy':
-        shutil.copyfile(os.path.join(PROJECT_DIRECTORY, 'docs', 'read_docs', 'conf_rtd.py'),
+        shutil.copyfile(os.path.join(PROJECT_DIRECTORY, 'docs', 'read_docs', 'conf_astropy.py'),
                         os.path.join(PROJECT_DIRECTORY, 'docs', 'conf.py'))
     ##
     ## Removing `read_docs` folder

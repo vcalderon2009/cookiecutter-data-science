@@ -10,9 +10,6 @@ Downloading and Installing
 
 **Author**: {{ cookiecutter.author_name }} (`{{cookiecutter.author_email}} <mailto:{{cookiecutter.author_email}}>`_)
 
-.. contents:: **Table of Contents**
-    :local:
-
 .. _donwload_repo_sec:
 
 ======================

@@ -6,7 +6,6 @@ Project Structure
 
 The organization of the project is the following:
 
-
 .. code-block:: text
 
         ├── LICENSE

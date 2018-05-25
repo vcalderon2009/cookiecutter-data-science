@@ -1,4 +1,6 @@
+{% if cookiecutter.use_read_the_docs == "RTD" %}
 |RTD| |License| |Issues|
+{% endif %}
 
 .. _GETTING_STARTED:
 
@@ -9,10 +11,6 @@ Getting Started
 {{cookiecutter.short_description}}
 
 **Author**: {{ cookiecutter.author_name }} (`{{cookiecutter.author_email}} <mailto:{{cookiecutter.author_email}}>`_)
-
-
-.. contents:: **Table of Contents**
-    :local:
 
 .. toctree::
     :maxdepth: 2
