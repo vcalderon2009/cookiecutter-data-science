@@ -22,5 +22,5 @@ dependencies:
         - sphinx_rtd_theme
         - cosmo-utils
         - configparser
-        - sphinx-automodapi
+        - sphinx-astropy
         - numpydoc
