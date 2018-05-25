@@ -48,6 +48,9 @@ def process_conf_docs():
     if '{{ cookiecutter.use_astropy_theme_or_RTD }}' == 'RTD':
         shutil.copyfile(os.path.join(PROJECT_DIRECTORY, 'docs', 'read_docs', 'conf_rtd.rst'),
                         os.path.join(PROJECT_DIRECTORY, 'docs', 'conf.py'))
+    if '{{ cookiecutter.use_astropy_theme_or_RTD }}' == 'RTD':
+        shutil.copyfile(os.path.join(PROJECT_DIRECTORY, 'docs', 'read_docs', 'conf_rtd.rst'),
+                        os.path.join(PROJECT_DIRECTORY, 'docs', 'conf.py'))
     ##
     ## Removing `read_docs` folder
     shutil.rmtree(os.path.join(PROJECT_DIRECTORY, 'docs','read_docs'))
@@ -55,7 +58,7 @@ def process_conf_docs():
 
 if __name__ == '__main__':
 
-    # process_licence('{{ cookiecutter.open_source_license }}')
+    process_licence('{{ cookiecutter.open_source_license }}')
 
     if '{{ cookiecutter.use_travis_ci }}' != 'y':
         remove_file('.travis.yml')
@@ -63,10 +66,6 @@ if __name__ == '__main__':
     if '{{ cookiecutter.use_read_the_docs }}' != 'y':
         remove_file('.rtd-environment.yml')
         remove_file('readthedocs.yml')
-    ##
-    ##
-    process_conf_docs()
-
     ##
     ## Astropy Helpers
     try:
