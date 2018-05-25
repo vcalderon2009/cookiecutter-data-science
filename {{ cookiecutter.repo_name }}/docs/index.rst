@@ -28,6 +28,15 @@ Contents
   project_organization
 
 
+
+
+
+
+.. ----------------------------------------------------------------------------
+
+Project based on the `modified <https://github.com/vcalderon2009/cookiecutter-data-science-vc>`_  version of
+`cookiecutter data science project template <https://drivendata.github.io/cookiecutter-data-science/>`_ 
+
 .. |Issues| image:: https://img.shields.io/github/issues/{{cookiecutter.github_project}}.svg
    :target: https://github.com/{{cookiecutter.github_project}}/issues
    :alt: Open Issues
@@ -56,6 +65,12 @@ Contents
 
 {% if cookiecutter.open_source_license == "BSD 2-Clause" %}
 .. |License| image:: https://img.shields.io/badge/license-BSD%202--Clause-blue.svg
+   :target: https://github.com/{{cookiecutter.github_project}}/blob/master/LICENSE.rst
+   :alt: Project License
+{% endif %}
+
+{% if cookiecutter.open_source_license == "MIT" %}
+.. |License| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://github.com/{{cookiecutter.github_project}}/blob/master/LICENSE.rst
    :alt: Project License
 {% endif %}
