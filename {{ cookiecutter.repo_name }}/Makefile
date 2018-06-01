@@ -1,5 +1,6 @@
-.PHONY: clean data lint requirements sync_data_to_s3 sync_data_from_s3 
-	environment update_environment remove_environment
+.PHONY: clean clean-pyc clean-build clean-test lint test_environment
+	environment update_environment remove_environment src_env src_update
+	src_remove
 
 #################################################################################
 # GLOBALS                                                                       #
@@ -18,6 +19,13 @@ HAS_CONDA=False
 else
 HAS_CONDA=True
 endif
+
+##############################################################################
+# VARIABLES FOR COMMANDS                                                     #
+##############################################################################
+src_pip_install:=pip install -e .
+
+src_pip_uninstall:= pip uninstall --yes src
 
 #################################################################################
 # COMMANDS                                                                      #
@@ -63,6 +71,7 @@ ifeq (True,$(HAS_CONDA))
 		# conda config --add channels conda-forge
 		conda env create -f $(ENVIRONMENT_FILE)
 endif
+	$(src_pip_install)
 
 ## Update python interpreter environment
 update_environment:
@@ -71,6 +80,8 @@ ifeq (True,$(HAS_CONDA))
 		conda env update -f $(ENVIRONMENT_FILE)
 		pip install --upgrade cosmo-utils
 endif
+	$(src_pip_uninstall)
+	$(src_pip_install)
 
 ## Delete python interpreter environment
 remove_environment:
@@ -78,6 +89,19 @@ ifeq (True,$(HAS_CONDA))
 		@echo ">>> Detected conda, removing conda environment"
 		conda env remove -n $(ENVIRONMENT_NAME)
 endif
+
+## Import local source directory package
+src_env:
+	$(src_pip_install)
+
+## Updated local source directory package
+src_update:
+	$(src_pip_uninstall)
+	$(src_pip_install)
+
+## Remove local source directory package
+src_remove:
+	$(src_pip_uninstall)
 
 #################################################################################
 # PROJECT RULES                                                                 #
