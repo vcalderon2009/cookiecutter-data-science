@@ -27,6 +27,12 @@ src_pip_install:=pip install -e .
 
 src_pip_uninstall:= pip uninstall --yes src
 
+cosmo_utils_pip_install:=pip install cosmo-utils
+
+cosmo_utils_pip_upgrade:= pip install --upgrade cosmo-utils
+
+cosmo_utils_pip_uninstall:= pip uninstall cosmo-utils
+
 #################################################################################
 # COMMANDS                                                                      #
 #################################################################################
@@ -78,7 +84,7 @@ update_environment:
 ifeq (True,$(HAS_CONDA))
 		@echo ">>> Detected conda, creating conda environment."
 		conda env update -f $(ENVIRONMENT_FILE)
-		pip install --upgrade cosmo-utils
+		$(cosmo_utils_pip_upgrade)
 endif
 	$(src_pip_uninstall)
 	$(src_pip_install)
@@ -102,6 +108,18 @@ src_update:
 ## Remove local source directory package
 src_remove:
 	$(src_pip_uninstall)
+
+## Installing cosmo-utils
+cosmo_utils_install:
+	$(cosmo_utils_pip_install)
+
+## Upgrading cosmo-utils
+cosmo_utils_upgrade:
+	$(cosmo_utils_pip_upgrade)
+
+## Removing cosmo-utils
+cosmo_utils_remove:
+	$(cosmo_utils_pip_uninstall)
 
 #################################################################################
 # PROJECT RULES                                                                 #
