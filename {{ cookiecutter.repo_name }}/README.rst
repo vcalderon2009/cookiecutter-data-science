@@ -26,7 +26,7 @@ Project based on the `modified <https://github.com/vcalderon2009/cookiecutter-da
    :target: https://github.com/{{cookiecutter.github_project}}/issues
    :alt: Open Issues
 
-.. |RTD| image:: https://readthedocs.org/projects/{{cookiecutter.repo_name}}/badge/?version=latest
+.. |RTD| image:: https://readthedocs.org/projects/{{cookiecutter.repo_name|lower|replace(' ', '-')|replace('_', '-')}}/badge/?version=latest
    :target: http://{{cookiecutter.repo_name}}.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
 
