@@ -7,7 +7,6 @@ channels:
 
 dependencies:
     - python>={{cookiecutter.minimum_python_version}}
-    - anaconda
     - astropy
     - seaborn
     - sphinx >= 1.6
@@ -16,5 +15,6 @@ dependencies:
         - GitPython
         - configparser
         - sphinx-astropy
+        - sphinx-automodapi
         - sphinx_rtd_theme
         
