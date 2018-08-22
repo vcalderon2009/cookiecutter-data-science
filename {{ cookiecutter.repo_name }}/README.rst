@@ -55,7 +55,7 @@ Project based on the `modified <https://github.com/vcalderon2009/cookiecutter-da
 {% endif %}
 
 {% if cookiecutter.open_source_license == "MIT" %}
-.. |License| image:: https://img.shields.io/badge/license-BSD%202--Clause-blue.svg
+.. |License| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://github.com/{{cookiecutter.github_project}}/blob/master/LICENSE.rst
    :alt: Project License
 {% endif %}
