@@ -130,8 +130,8 @@ use my version. Some of the differences are:
 
 You can check how these two styles look like:
 
-- |RTD_rtdtheme| - **Read The Docs Version**
-- |RTD_astropytheme| - **Astropy Version**
+- |Version_RTD| - **Read The Docs Version**
+- |Version_Astropy| - **Astropy Version**
 
 Next, you can create your own Project based on this *cookiecutter* version
 

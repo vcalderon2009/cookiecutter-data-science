@@ -10,12 +10,8 @@ Getting Started
 
 **Description**: A logical, reasonably standardized, but flexible project structure for doing and sharing data science work.
 
-
-
-
-
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
 
     INSTALL
 

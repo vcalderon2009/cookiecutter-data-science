@@ -23,7 +23,7 @@ Description
 
 .. epigraph::
 
-   A logical, reasonably standardized, but flexible project structure for doing and sharing data science work.
+   **A logical, reasonably standardized, but flexible project structure for doing and sharing data science work.**
 
    -- Data Science Team
 
