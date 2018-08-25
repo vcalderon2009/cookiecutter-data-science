@@ -1,0 +1,19 @@
+name: mnras_cookiecutter_env
+
+channels:
+    - defaults
+    - conda-forge
+    - astropy
+
+dependencies:
+    - python>=3.6
+    - astropy
+    - sphinx >= 1.6
+    - pip
+    - pip:
+        - GitPython
+        - configparser
+        - sphinx-astropy
+        - sphinx-automodapi
+        - sphinx_rtd_theme
+        
