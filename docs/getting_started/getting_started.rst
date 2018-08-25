@@ -1,4 +1,4 @@
-|RTD| |License| |Issues| |PDF_Latest|
+|RTD| |License| |Issues| |Version_RTD| |Version_Astropy|
 
 .. _GETTING_STARTED:
 
@@ -8,8 +8,10 @@ Getting Started
 
 **Author**: `Victor Calderon <http://vcalderon.me>`_ (`victor.calderon@vanderbilt.edu <mailto:victor.calderon@vanderbilt.edu>`_)
 
-**Description**: An easy, reasonably standardized, but flexible template for creating paper for
-the `Monthly Notices of the Royal Astronomical society <https://academic.oup.com/mnras>`_
+**Description**: A logical, reasonably standardized, but flexible project structure for doing and sharing data science work.
+
+
+
 
 
 .. toctree::
@@ -19,21 +21,25 @@ the `Monthly Notices of the Royal Astronomical society <https://academic.oup.com
 
 .. ----------------------------------------------------------------------------
 
-Project based on the `modified <https://github.com/vcalderon2009/MNRAS_Cookiecutter>`_  version of the
-`MNRAS LaTeX Template <https://www.overleaf.com/latex/templates/monthly-notices-of-the-royal-astronomical-society-mnras-latex-template-and-guide-for-authors/kqnjzrwjwjth>`_.
+Project based on the `modified <https://github.com/vcalderon2009/cookiecutter-data-science-vc>`_  version of the
+`cookiecutter data science project template <https://drivendata.github.io/cookiecutter-data-science/>`_.
 
-.. |Issues| image:: https://img.shields.io/github/issues/vcalderon2009/MNRAS_Cookiecutter.svg
-   :target: https://github.com/vcalderon2009/MNRAS_Cookiecutter/issues
-   :alt: Open Issues
+.. |Issues| image:: https://img.shields.io/github/issues/vcalderon2009/cookiecutter-data-science-vc.svg
+   :alt: GitHub issues
+   :target: https://github.com/vcalderon2009/cookiecutter-data-science-vc/issues
 
-.. |RTD| image:: https://readthedocs.org/projects/mnras-cookiecutter/badge/?version=latest
-   :target: https://mnras-cookiecutter.readthedocs.io/en/latest/?badge=latest
+.. |RTD| image:: https://readthedocs.org/projects/cookiecutter-data-science-vc/badge/?version=latest
+   :target: https://cookiecutter-data-science-vc.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
 
 .. |License| image:: https://img.shields.io/badge/license-MIT-blue.svg
-   :target: https://github.com/vcalderon2009/MNRAS_Cookiecutter/blob/master/LICENSE
+   :target: https://github.com/vcalderon2009/cookiecutter-data-science-vc/blob/master/LICENSE
    :alt: Project License
 
-.. |PDF_Latest| image:: https://img.shields.io/badge/PDF-Latest-orange.svg
-   :target: https://cdn.rawgit.com/vcalderon2009/MNRAS_Cookiecutter/777d6518/docs/documents/MNRAS_output_example.pdf
-   :alt: PDF Latest
+.. |Version_RTD| image:: https://img.shields.io/badge/Version-RTD-orange.svg
+   :target: http://test-cookieproj-rtd.rtfd.io/
+   :alt: Version RTD
+
+.. |Version_Astropy| image:: https://img.shields.io/badge/Version-Astropy-orange.svg
+   :target: http://test-cookieproj-astropy.rtfd.io/
+   :alt: Version Astropy

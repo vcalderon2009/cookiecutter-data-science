@@ -2,9 +2,9 @@
 
 .. _MAIN_SEC:
 
-************************************************************************
-Cookiecutter Data Science Template Documentation - VC Edition
-************************************************************************
+****************************************************
+Cookiecutter Data Science Template docs - VC Edition
+****************************************************
 
 .. _AUTHOR_SEC:
 
@@ -42,7 +42,6 @@ This documentation is part of the repository
 and has been adapated from the `Cookiecutter Data Science Project template <https://drivendata.github.io/cookiecutter-data-science/>`_ 
 by `Driven Data <https://www.drivendata.org/>`_ organization.
 
-
 .. _MAIN_SEC_CONTENTS:
 
 ========
@@ -66,13 +65,12 @@ Contents
 Project based on the `modified <https://github.com/vcalderon2009/cookiecutter-data-science-vc>`_  version of the
 `cookiecutter data science project template <https://drivendata.github.io/cookiecutter-data-science/>`_.
 
-
 .. |Issues| image:: https://img.shields.io/github/issues/vcalderon2009/cookiecutter-data-science-vc.svg
    :alt: GitHub issues
    :target: https://github.com/vcalderon2009/cookiecutter-data-science-vc/issues
 
-.. |RTD| image:: https://readthedocs.org/projects/mnras-cookiecutter/badge/?version=latest
-   :target: https://mnras-cookiecutter.readthedocs.io/en/latest/?badge=latest
+.. |RTD| image:: https://readthedocs.org/projects/cookiecutter-data-science-vc/badge/?version=latest
+   :target: https://cookiecutter-data-science-vc.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
 
 .. |License| image:: https://img.shields.io/badge/license-MIT-blue.svg

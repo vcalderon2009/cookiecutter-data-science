@@ -105,7 +105,7 @@ release = setup_cfg['version']
 
 # Please update these texts to match the name of your package.
 html_theme_options = {
-    'logotext1': 'MNRAS',  # white,  semi-bold
+    'logotext1': 'Data Science VC',  # white,  semi-bold
     'logotext2': '-cookiecutter',  # orange, light
     'logotext3': ':docs'   # white,  light
     }

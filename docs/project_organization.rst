@@ -1,4 +1,4 @@
-|RTD| |License| |Issues| |PDF_Latest|
+|RTD| |License| |Issues| |Version_RTD| |Version_Astropy|
 
 .. _proj_structure:
 
@@ -10,56 +10,75 @@ The organization of the project is the following:
 
 .. code-block:: text
 
-        ├── Extras <- Folder with documents like main `aliases`, `packages`, etc.
-        │    ├── commands.tex <- List of commands used throughout the paper.
-        │    └── packages.tex <- List of packages to load for the paper.
+        ├── LICENSE
+        ├── Makefile           <- Makefile with commands like `make data` or `make train`
+        ├── README.md          <- The top-level README for developers using this project.
+        ├── data
+        │   ├── external       <- Data from third party sources.
+        │   ├── interim        <- Intermediate data that has been transformed.
+        │   ├── processed      <- The final, canonical data sets for modeling.
+        │   └── raw            <- The original, immutable data dump.
         │
-        ├── Figures <- Directory for project figures.
-        │    └── .gitkeep
+        ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
         │
-        ├── Paper
-        │    ├── mnras.bst                             <-- MNRAS bibliography style file.
-        │    ├── mnras.cls                             <-- MNRAS class file.
-        │    └── paper.tex                             <- Main TeX file for compiling.
+        ├── models             <- Trained and serialized models, model predictions, or model summaries
         │
-        ├── Script_files
-        │    ├── modify_bib.sh
-        │    ├── hyperlink-year-only-natbib-patch.tex. <- File that fixed the bibliography style.
-        │    └── nat2jour.pl
+        ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
+        │                         the creator's initials, and a short `-` delimited description, e.g.
+        │                         `1.0-jqp-initial-data-exploration`.
         │
-        ├── Section_files
-        │   ├── 01_abstract.tex                        <-- File for the 'abstract'.
-        │   ├── 02_introduction.tex                    <-- File for the 'Introduction'.
-        │   ├── 03_data_methods.tex                    <-- File for the 'Data and Methods'.
-        │   ├── 04_results.tex                         <-- File for the 'Results'.
-        │   ├── 05_summary_discussion.tex              <-- File for the 'Summary and Discussion'.
-        │   └── 06_acknowledgements.tex                <-- File for the 'Acknowledgements'.
+        ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
         │
-        ├── .gitignore                                 <- File that dictates which files to ignore when using `git`.
-        ├── Makefile                                   <- Makefile with command, i.e. `make main.tex` or `make clean`
-        ├── Makefile.inc                               <- File with input parameters for the `Makefile`.
-        ├── Mendeley.bib                               <- Bibliography of the project. You can replace this file if needed.
-        ├── README.md                                  <- The top-level README for students
-        ├── LICENSE                                    <- License used for the distribution of the paper.
-        └── requirements.txt                           <- File with a list of packages required for running this.
+        ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+        │   └── figures        <- Generated graphics and figures to be used in reporting
+        │
+        ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+        │                         generated with `pip freeze > requirements.txt`
+        │
+        ├── environment.yml    <- The Anaconda environment requirements file for reproducing the analysis environment.
+        │                         This file is used by Anaconda to create the project environment.
+        │
+        ├── src                <- Source code for use in this project.
+        │   ├── __init__.py    <- Makes src a Python module
+        │   │
+        │   ├── data           <- Scripts to download or generate data
+        │   │   │
+        │   │   └── make_dataset.py
+        │   │
+        │   ├── features       <- Scripts to turn raw data into features for modeling
+        │   │   └── build_features.py
+        │   │
+        │   ├── models         <- Scripts to train models and then use trained models to make
+        │   │   │                 predictions
+        │   │   ├── predict_model.py
+        │   │   └── train_model.py
+        │   │
+        │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+        │       └── visualize.py
+        │
+        └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 
 .. ----------------------------------------------------------------------------
 
-Project based on the `modified <https://github.com/vcalderon2009/MNRAS_Cookiecutter>`_  version of the
-`MNRAS LaTeX Template <https://www.overleaf.com/latex/templates/monthly-notices-of-the-royal-astronomical-society-mnras-latex-template-and-guide-for-authors/kqnjzrwjwjth>`_.
+Project based on the `modified <https://github.com/vcalderon2009/cookiecutter-data-science-vc>`_  version of the
+`cookiecutter data science project template <https://drivendata.github.io/cookiecutter-data-science/>`_.
 
-.. |Issues| image:: https://img.shields.io/github/issues/vcalderon2009/MNRAS_Cookiecutter.svg
-   :target: https://github.com/vcalderon2009/MNRAS_Cookiecutter/issues
-   :alt: Open Issues
+.. |Issues| image:: https://img.shields.io/github/issues/vcalderon2009/cookiecutter-data-science-vc.svg
+   :alt: GitHub issues
+   :target: https://github.com/vcalderon2009/cookiecutter-data-science-vc/issues
 
-.. |RTD| image:: https://readthedocs.org/projects/mnras-cookiecutter/badge/?version=latest
-   :target: https://mnras-cookiecutter.readthedocs.io/en/latest/?badge=latest
+.. |RTD| image:: https://readthedocs.org/projects/cookiecutter-data-science-vc/badge/?version=latest
+   :target: https://cookiecutter-data-science-vc.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
 
 .. |License| image:: https://img.shields.io/badge/license-MIT-blue.svg
-   :target: https://github.com/vcalderon2009/MNRAS_Cookiecutter/blob/master/LICENSE
+   :target: https://github.com/vcalderon2009/cookiecutter-data-science-vc/blob/master/LICENSE
    :alt: Project License
 
-.. |PDF_Latest| image:: https://img.shields.io/badge/PDF-Latest-orange.svg
-   :target: https://cdn.rawgit.com/vcalderon2009/MNRAS_Cookiecutter/777d6518/docs/documents/MNRAS_output_example.pdf
-   :alt: PDF Latest
+.. |Version_RTD| image:: https://img.shields.io/badge/Version-RTD-orange.svg
+   :target: http://test-cookieproj-rtd.rtfd.io/
+   :alt: Version RTD
+
+.. |Version_Astropy| image:: https://img.shields.io/badge/Version-Astropy-orange.svg
+   :target: http://test-cookieproj-astropy.rtfd.io/
+   :alt: Version Astropy

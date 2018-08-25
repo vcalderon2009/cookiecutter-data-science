@@ -1,4 +1,4 @@
-name: mnras_cookiecutter_env
+name: data_science_cookiecutter_env
 
 channels:
     - defaults
