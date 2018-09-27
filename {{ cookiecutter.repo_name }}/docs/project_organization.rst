@@ -69,9 +69,9 @@ Project based on the `modified <https://github.com/vcalderon2009/cookiecutter-da
     :target: https://github.com/{{cookiecutter.github_project}}/issues
     :alt: Open Issues
 
-.. |RTD| image:: https://readthedocs.org/projects/{{cookiecutter.repo_name}}/badge/?version=latest
-    :target: http://{{cookiecutter.repo_name}}.readthedocs.io/en/latest/?badge=latest
-    :alt: Documentation Status
+.. |RTD| image:: https://readthedocs.org/projects/{{cookiecutter.repo_name|lower|replace(' ', '-')|replace('_', '-')}}/badge/?version=latest
+   :target: https://{{cookiecutter.repo_name|lower|replace(' ', '-')|replace('_', '-')}}.rtfd.io/en/latest/
+   :alt: Documentation Status
 
 {% if cookiecutter.open_source_license == "BSD 3-Clause" %}
 .. |License| image:: https://img.shields.io/badge/License-BSD%203--Clause-blue.svg

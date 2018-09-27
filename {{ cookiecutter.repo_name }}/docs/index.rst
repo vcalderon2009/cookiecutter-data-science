@@ -42,7 +42,7 @@ Project based on the `modified <https://github.com/vcalderon2009/cookiecutter-da
    :alt: Open Issues
 
 .. |RTD| image:: https://readthedocs.org/projects/{{cookiecutter.repo_name|lower|replace(' ', '-')|replace('_', '-')}}/badge/?version=latest
-   :target: https://readthedocs.org/projects/{{cookiecutter.repo_name|lower|replace(' ', '-')|replace('_', '-')}}/badge/?version=latest
+   :target: https://{{cookiecutter.repo_name|lower|replace(' ', '-')|replace('_', '-')}}.rtfd.io/en/latest/
    :alt: Documentation Status
 
 {% if cookiecutter.open_source_license == "BSD 3-Clause" %}
