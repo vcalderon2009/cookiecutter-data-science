@@ -14,7 +14,7 @@ dependencies:
     - scipy
     - seaborn
     - sphinx >= 1.6
-    - pip
+    - pip >= 18.0
     - pip:
         - GitPython
         - progressbar2
